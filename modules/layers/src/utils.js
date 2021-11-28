@@ -11,7 +11,7 @@ import type {
   FeatureOf,
   FeatureWithProps
 } from '@nebula.gl/edit-modes';
-import { WebMercatorViewport } from '@deck.gl/core';
+import { WebMercatorViewport } from 'kepler-outdated-deck.gl-core';
 
 export type NearestPointType = FeatureWithProps<Point, { dist: number, index: number }>;
 
