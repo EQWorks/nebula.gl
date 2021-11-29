@@ -13,74 +13,42 @@ var _twoClickPolygonMode = require("./two-click-polygon-mode.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+class DrawCircleFromCenterMode extends _twoClickPolygonMode.TwoClickPolygonMode {
+  handlePointerMoveAdapter(event, props) {
+    var result = {
+      editAction: null,
+      cancelMapPan: false
+    };
+    var clickSequence = this.getClickSequence();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var DrawCircleFromCenterMode =
-/*#__PURE__*/
-function (_TwoClickPolygonMode) {
-  _inherits(DrawCircleFromCenterMode, _TwoClickPolygonMode);
-
-  function DrawCircleFromCenterMode() {
-    _classCallCheck(this, DrawCircleFromCenterMode);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DrawCircleFromCenterMode).apply(this, arguments));
-  }
-
-  _createClass(DrawCircleFromCenterMode, [{
-    key: "handlePointerMoveAdapter",
-    value: function handlePointerMoveAdapter(event, props) {
-      var result = {
-        editAction: null,
-        cancelMapPan: false
-      };
-      var clickSequence = this.getClickSequence();
-
-      if (clickSequence.length === 0) {
-        // nothing to do yet
-        return result;
-      }
-
-      var modeConfig = props.modeConfig || {}; // Default turf value for circle is 64
-
-      var _modeConfig$steps = modeConfig.steps,
-          steps = _modeConfig$steps === void 0 ? 64 : _modeConfig$steps;
-      var options = {
-        steps: steps
-      };
-
-      if (steps < 4) {
-        console.warn("Minimum steps to draw a circle is 4 "); // eslint-disable-line no-console,no-undef
-
-        options.steps = 4;
-      }
-
-      var centerCoordinates = clickSequence[0];
-      var radius = Math.max((0, _distance.default)(centerCoordinates, event.mapCoords), 0.001);
-
-      this._setTentativeFeature((0, _circle.default)(centerCoordinates, radius, options));
-
+    if (clickSequence.length === 0) {
+      // nothing to do yet
       return result;
     }
-  }]);
 
-  return DrawCircleFromCenterMode;
-}(_twoClickPolygonMode.TwoClickPolygonMode);
+    var modeConfig = props.modeConfig || {}; // Default turf value for circle is 64
+
+    var _modeConfig$steps = modeConfig.steps,
+        steps = _modeConfig$steps === void 0 ? 64 : _modeConfig$steps;
+    var options = {
+      steps: steps
+    };
+
+    if (steps < 4) {
+      console.warn("Minimum steps to draw a circle is 4 "); // eslint-disable-line no-console,no-undef
+
+      options.steps = 4;
+    }
+
+    var centerCoordinates = clickSequence[0];
+    var radius = Math.max((0, _distance.default)(centerCoordinates, event.mapCoords), 0.001);
+
+    this._setTentativeFeature((0, _circle.default)(centerCoordinates, radius, options));
+
+    return result;
+  }
+
+}
 
 exports.DrawCircleFromCenterMode = DrawCircleFromCenterMode;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvZHJhdy1jaXJjbGUtZnJvbS1jZW50ZXItbW9kZS5qcyJdLCJuYW1lcyI6WyJEcmF3Q2lyY2xlRnJvbUNlbnRlck1vZGUiLCJldmVudCIsInByb3BzIiwicmVzdWx0IiwiZWRpdEFjdGlvbiIsImNhbmNlbE1hcFBhbiIsImNsaWNrU2VxdWVuY2UiLCJnZXRDbGlja1NlcXVlbmNlIiwibGVuZ3RoIiwibW9kZUNvbmZpZyIsInN0ZXBzIiwib3B0aW9ucyIsImNvbnNvbGUiLCJ3YXJuIiwiY2VudGVyQ29vcmRpbmF0ZXMiLCJyYWRpdXMiLCJNYXRoIiwibWF4IiwibWFwQ29vcmRzIiwiX3NldFRlbnRhdGl2ZUZlYXR1cmUiLCJUd29DbGlja1BvbHlnb25Nb2RlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBRUE7O0FBQ0E7O0FBSUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFYUEsd0I7Ozs7Ozs7Ozs7Ozs7NkNBRVRDLEssRUFDQUMsSyxFQUMyRDtBQUMzRCxVQUFNQyxNQUFNLEdBQUc7QUFBRUMsUUFBQUEsVUFBVSxFQUFFLElBQWQ7QUFBb0JDLFFBQUFBLFlBQVksRUFBRTtBQUFsQyxPQUFmO0FBQ0EsVUFBTUMsYUFBYSxHQUFHLEtBQUtDLGdCQUFMLEVBQXRCOztBQUVBLFVBQUlELGFBQWEsQ0FBQ0UsTUFBZCxLQUF5QixDQUE3QixFQUFnQztBQUM5QjtBQUNBLGVBQU9MLE1BQVA7QUFDRDs7QUFFRCxVQUFNTSxVQUFVLEdBQUdQLEtBQUssQ0FBQ08sVUFBTixJQUFvQixFQUF2QyxDQVQyRCxDQVUzRDs7QUFWMkQsOEJBV3BDQSxVQVhvQyxDQVduREMsS0FYbUQ7QUFBQSxVQVduREEsS0FYbUQsa0NBVzNDLEVBWDJDO0FBWTNELFVBQU1DLE9BQU8sR0FBRztBQUFFRCxRQUFBQSxLQUFLLEVBQUxBO0FBQUYsT0FBaEI7O0FBRUEsVUFBSUEsS0FBSyxHQUFHLENBQVosRUFBZTtBQUNiRSxRQUFBQSxPQUFPLENBQUNDLElBQVIseUNBRGEsQ0FDeUM7O0FBQ3RERixRQUFBQSxPQUFPLENBQUNELEtBQVIsR0FBZ0IsQ0FBaEI7QUFDRDs7QUFFRCxVQUFNSSxpQkFBaUIsR0FBR1IsYUFBYSxDQUFDLENBQUQsQ0FBdkM7QUFDQSxVQUFNUyxNQUFNLEdBQUdDLElBQUksQ0FBQ0MsR0FBTCxDQUFTLHVCQUFTSCxpQkFBVCxFQUE0QmIsS0FBSyxDQUFDaUIsU0FBbEMsQ0FBVCxFQUF1RCxLQUF2RCxDQUFmOztBQUNBLFdBQUtDLG9CQUFMLENBQTBCLHFCQUFPTCxpQkFBUCxFQUEwQkMsTUFBMUIsRUFBa0NKLE9BQWxDLENBQTFCOztBQUVBLGFBQU9SLE1BQVA7QUFDRDs7OztFQTVCMkNpQix3QyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5cbmltcG9ydCBjaXJjbGUgZnJvbSAnQHR1cmYvY2lyY2xlJztcbmltcG9ydCBkaXN0YW5jZSBmcm9tICdAdHVyZi9kaXN0YW5jZSc7XG5pbXBvcnQgdHlwZSB7IFBvaW50ZXJNb3ZlRXZlbnQsIE1vZGVQcm9wcyB9IGZyb20gJy4uL3R5cGVzLmpzJztcbmltcG9ydCB7IHR5cGUgRmVhdHVyZUNvbGxlY3Rpb24gfSBmcm9tICcuLi9nZW9qc29uLXR5cGVzLmpzJztcbmltcG9ydCB7IHR5cGUgR2VvSnNvbkVkaXRBY3Rpb24gfSBmcm9tICcuL2dlb2pzb24tZWRpdC1tb2RlLmpzJztcbmltcG9ydCB7IFR3b0NsaWNrUG9seWdvbk1vZGUgfSBmcm9tICcuL3R3by1jbGljay1wb2x5Z29uLW1vZGUuanMnO1xuXG5leHBvcnQgY2xhc3MgRHJhd0NpcmNsZUZyb21DZW50ZXJNb2RlIGV4dGVuZHMgVHdvQ2xpY2tQb2x5Z29uTW9kZSB7XG4gIGhhbmRsZVBvaW50ZXJNb3ZlQWRhcHRlcihcbiAgICBldmVudDogUG9pbnRlck1vdmVFdmVudCxcbiAgICBwcm9wczogTW9kZVByb3BzPEZlYXR1cmVDb2xsZWN0aW9uPlxuICApOiB7IGVkaXRBY3Rpb246ID9HZW9Kc29uRWRpdEFjdGlvbiwgY2FuY2VsTWFwUGFuOiBib29sZWFuIH0ge1xuICAgIGNvbnN0IHJlc3VsdCA9IHsgZWRpdEFjdGlvbjogbnVsbCwgY2FuY2VsTWFwUGFuOiBmYWxzZSB9O1xuICAgIGNvbnN0IGNsaWNrU2VxdWVuY2UgPSB0aGlzLmdldENsaWNrU2VxdWVuY2UoKTtcblxuICAgIGlmIChjbGlja1NlcXVlbmNlLmxlbmd0aCA9PT0gMCkge1xuICAgICAgLy8gbm90aGluZyB0byBkbyB5ZXRcbiAgICAgIHJldHVybiByZXN1bHQ7XG4gICAgfVxuXG4gICAgY29uc3QgbW9kZUNvbmZpZyA9IHByb3BzLm1vZGVDb25maWcgfHwge307XG4gICAgLy8gRGVmYXVsdCB0dXJmIHZhbHVlIGZvciBjaXJjbGUgaXMgNjRcbiAgICBjb25zdCB7IHN0ZXBzID0gNjQgfSA9IG1vZGVDb25maWc7XG4gICAgY29uc3Qgb3B0aW9ucyA9IHsgc3RlcHMgfTtcblxuICAgIGlmIChzdGVwcyA8IDQpIHtcbiAgICAgIGNvbnNvbGUud2FybihgTWluaW11bSBzdGVwcyB0byBkcmF3IGEgY2lyY2xlIGlzIDQgYCk7IC8vIGVzbGludC1kaXNhYmxlLWxpbmUgbm8tY29uc29sZSxuby11bmRlZlxuICAgICAgb3B0aW9ucy5zdGVwcyA9IDQ7XG4gICAgfVxuXG4gICAgY29uc3QgY2VudGVyQ29vcmRpbmF0ZXMgPSBjbGlja1NlcXVlbmNlWzBdO1xuICAgIGNvbnN0IHJhZGl1cyA9IE1hdGgubWF4KGRpc3RhbmNlKGNlbnRlckNvb3JkaW5hdGVzLCBldmVudC5tYXBDb29yZHMpLCAwLjAwMSk7XG4gICAgdGhpcy5fc2V0VGVudGF0aXZlRmVhdHVyZShjaXJjbGUoY2VudGVyQ29vcmRpbmF0ZXMsIHJhZGl1cywgb3B0aW9ucykpO1xuXG4gICAgcmV0dXJuIHJlc3VsdDtcbiAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvZHJhdy1jaXJjbGUtZnJvbS1jZW50ZXItbW9kZS5qcyJdLCJuYW1lcyI6WyJEcmF3Q2lyY2xlRnJvbUNlbnRlck1vZGUiLCJUd29DbGlja1BvbHlnb25Nb2RlIiwiaGFuZGxlUG9pbnRlck1vdmVBZGFwdGVyIiwiZXZlbnQiLCJwcm9wcyIsInJlc3VsdCIsImVkaXRBY3Rpb24iLCJjYW5jZWxNYXBQYW4iLCJjbGlja1NlcXVlbmNlIiwiZ2V0Q2xpY2tTZXF1ZW5jZSIsImxlbmd0aCIsIm1vZGVDb25maWciLCJzdGVwcyIsIm9wdGlvbnMiLCJjb25zb2xlIiwid2FybiIsImNlbnRlckNvb3JkaW5hdGVzIiwicmFkaXVzIiwiTWF0aCIsIm1heCIsIm1hcENvb3JkcyIsIl9zZXRUZW50YXRpdmVGZWF0dXJlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBRUE7O0FBQ0E7O0FBSUE7Ozs7QUFFTyxNQUFNQSx3QkFBTixTQUF1Q0Msd0NBQXZDLENBQTJEO0FBQ2hFQyxFQUFBQSx3QkFBd0IsQ0FDdEJDLEtBRHNCLEVBRXRCQyxLQUZzQixFQUdxQztBQUMzRCxRQUFNQyxNQUFNLEdBQUc7QUFBRUMsTUFBQUEsVUFBVSxFQUFFLElBQWQ7QUFBb0JDLE1BQUFBLFlBQVksRUFBRTtBQUFsQyxLQUFmO0FBQ0EsUUFBTUMsYUFBYSxHQUFHLEtBQUtDLGdCQUFMLEVBQXRCOztBQUVBLFFBQUlELGFBQWEsQ0FBQ0UsTUFBZCxLQUF5QixDQUE3QixFQUFnQztBQUM5QjtBQUNBLGFBQU9MLE1BQVA7QUFDRDs7QUFFRCxRQUFNTSxVQUFVLEdBQUdQLEtBQUssQ0FBQ08sVUFBTixJQUFvQixFQUF2QyxDQVQyRCxDQVUzRDs7QUFWMkQsNEJBV3BDQSxVQVhvQyxDQVduREMsS0FYbUQ7QUFBQSxRQVduREEsS0FYbUQsa0NBVzNDLEVBWDJDO0FBWTNELFFBQU1DLE9BQU8sR0FBRztBQUFFRCxNQUFBQSxLQUFLLEVBQUxBO0FBQUYsS0FBaEI7O0FBRUEsUUFBSUEsS0FBSyxHQUFHLENBQVosRUFBZTtBQUNiRSxNQUFBQSxPQUFPLENBQUNDLElBQVIseUNBRGEsQ0FDeUM7O0FBQ3RERixNQUFBQSxPQUFPLENBQUNELEtBQVIsR0FBZ0IsQ0FBaEI7QUFDRDs7QUFFRCxRQUFNSSxpQkFBaUIsR0FBR1IsYUFBYSxDQUFDLENBQUQsQ0FBdkM7QUFDQSxRQUFNUyxNQUFNLEdBQUdDLElBQUksQ0FBQ0MsR0FBTCxDQUFTLHVCQUFTSCxpQkFBVCxFQUE0QmIsS0FBSyxDQUFDaUIsU0FBbEMsQ0FBVCxFQUF1RCxLQUF2RCxDQUFmOztBQUNBLFNBQUtDLG9CQUFMLENBQTBCLHFCQUFPTCxpQkFBUCxFQUEwQkMsTUFBMUIsRUFBa0NKLE9BQWxDLENBQTFCOztBQUVBLFdBQU9SLE1BQVA7QUFDRDs7QUE1QitEIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQGZsb3dcblxuaW1wb3J0IGNpcmNsZSBmcm9tICdAdHVyZi9jaXJjbGUnO1xuaW1wb3J0IGRpc3RhbmNlIGZyb20gJ0B0dXJmL2Rpc3RhbmNlJztcbmltcG9ydCB0eXBlIHsgUG9pbnRlck1vdmVFdmVudCwgTW9kZVByb3BzIH0gZnJvbSAnLi4vdHlwZXMuanMnO1xuaW1wb3J0IHsgdHlwZSBGZWF0dXJlQ29sbGVjdGlvbiB9IGZyb20gJy4uL2dlb2pzb24tdHlwZXMuanMnO1xuaW1wb3J0IHsgdHlwZSBHZW9Kc29uRWRpdEFjdGlvbiB9IGZyb20gJy4vZ2VvanNvbi1lZGl0LW1vZGUuanMnO1xuaW1wb3J0IHsgVHdvQ2xpY2tQb2x5Z29uTW9kZSB9IGZyb20gJy4vdHdvLWNsaWNrLXBvbHlnb24tbW9kZS5qcyc7XG5cbmV4cG9ydCBjbGFzcyBEcmF3Q2lyY2xlRnJvbUNlbnRlck1vZGUgZXh0ZW5kcyBUd29DbGlja1BvbHlnb25Nb2RlIHtcbiAgaGFuZGxlUG9pbnRlck1vdmVBZGFwdGVyKFxuICAgIGV2ZW50OiBQb2ludGVyTW92ZUV2ZW50LFxuICAgIHByb3BzOiBNb2RlUHJvcHM8RmVhdHVyZUNvbGxlY3Rpb24+XG4gICk6IHsgZWRpdEFjdGlvbjogP0dlb0pzb25FZGl0QWN0aW9uLCBjYW5jZWxNYXBQYW46IGJvb2xlYW4gfSB7XG4gICAgY29uc3QgcmVzdWx0ID0geyBlZGl0QWN0aW9uOiBudWxsLCBjYW5jZWxNYXBQYW46IGZhbHNlIH07XG4gICAgY29uc3QgY2xpY2tTZXF1ZW5jZSA9IHRoaXMuZ2V0Q2xpY2tTZXF1ZW5jZSgpO1xuXG4gICAgaWYgKGNsaWNrU2VxdWVuY2UubGVuZ3RoID09PSAwKSB7XG4gICAgICAvLyBub3RoaW5nIHRvIGRvIHlldFxuICAgICAgcmV0dXJuIHJlc3VsdDtcbiAgICB9XG5cbiAgICBjb25zdCBtb2RlQ29uZmlnID0gcHJvcHMubW9kZUNvbmZpZyB8fCB7fTtcbiAgICAvLyBEZWZhdWx0IHR1cmYgdmFsdWUgZm9yIGNpcmNsZSBpcyA2NFxuICAgIGNvbnN0IHsgc3RlcHMgPSA2NCB9ID0gbW9kZUNvbmZpZztcbiAgICBjb25zdCBvcHRpb25zID0geyBzdGVwcyB9O1xuXG4gICAgaWYgKHN0ZXBzIDwgNCkge1xuICAgICAgY29uc29sZS53YXJuKGBNaW5pbXVtIHN0ZXBzIHRvIGRyYXcgYSBjaXJjbGUgaXMgNCBgKTsgLy8gZXNsaW50LWRpc2FibGUtbGluZSBuby1jb25zb2xlLG5vLXVuZGVmXG4gICAgICBvcHRpb25zLnN0ZXBzID0gNDtcbiAgICB9XG5cbiAgICBjb25zdCBjZW50ZXJDb29yZGluYXRlcyA9IGNsaWNrU2VxdWVuY2VbMF07XG4gICAgY29uc3QgcmFkaXVzID0gTWF0aC5tYXgoZGlzdGFuY2UoY2VudGVyQ29vcmRpbmF0ZXMsIGV2ZW50Lm1hcENvb3JkcyksIDAuMDAxKTtcbiAgICB0aGlzLl9zZXRUZW50YXRpdmVGZWF0dXJlKGNpcmNsZShjZW50ZXJDb29yZGluYXRlcywgcmFkaXVzLCBvcHRpb25zKSk7XG5cbiAgICByZXR1cm4gcmVzdWx0O1xuICB9XG59XG4iXX0=

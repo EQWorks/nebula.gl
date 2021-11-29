@@ -11,60 +11,28 @@ var _twoClickPolygonMode = require("./two-click-polygon-mode.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+class DrawRectangleMode extends _twoClickPolygonMode.TwoClickPolygonMode {
+  handlePointerMoveAdapter(event) {
+    var result = {
+      editAction: null,
+      cancelMapPan: false
+    };
+    var clickSequence = this.getClickSequence();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var DrawRectangleMode =
-/*#__PURE__*/
-function (_TwoClickPolygonMode) {
-  _inherits(DrawRectangleMode, _TwoClickPolygonMode);
-
-  function DrawRectangleMode() {
-    _classCallCheck(this, DrawRectangleMode);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DrawRectangleMode).apply(this, arguments));
-  }
-
-  _createClass(DrawRectangleMode, [{
-    key: "handlePointerMoveAdapter",
-    value: function handlePointerMoveAdapter(event) {
-      var result = {
-        editAction: null,
-        cancelMapPan: false
-      };
-      var clickSequence = this.getClickSequence();
-
-      if (clickSequence.length === 0) {
-        // nothing to do yet
-        return result;
-      }
-
-      var corner1 = clickSequence[0];
-      var corner2 = event.mapCoords;
-
-      this._setTentativeFeature((0, _bboxPolygon.default)([corner1[0], corner1[1], corner2[0], corner2[1]]));
-
+    if (clickSequence.length === 0) {
+      // nothing to do yet
       return result;
     }
-  }]);
 
-  return DrawRectangleMode;
-}(_twoClickPolygonMode.TwoClickPolygonMode);
+    var corner1 = clickSequence[0];
+    var corner2 = event.mapCoords;
+
+    this._setTentativeFeature((0, _bboxPolygon.default)([corner1[0], corner1[1], corner2[0], corner2[1]]));
+
+    return result;
+  }
+
+}
 
 exports.DrawRectangleMode = DrawRectangleMode;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvZHJhdy1yZWN0YW5nbGUtbW9kZS5qcyJdLCJuYW1lcyI6WyJEcmF3UmVjdGFuZ2xlTW9kZSIsImV2ZW50IiwicmVzdWx0IiwiZWRpdEFjdGlvbiIsImNhbmNlbE1hcFBhbiIsImNsaWNrU2VxdWVuY2UiLCJnZXRDbGlja1NlcXVlbmNlIiwibGVuZ3RoIiwiY29ybmVyMSIsImNvcm5lcjIiLCJtYXBDb29yZHMiLCJfc2V0VGVudGF0aXZlRmVhdHVyZSIsIlR3b0NsaWNrUG9seWdvbk1vZGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFFQTs7QUFHQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUVhQSxpQjs7Ozs7Ozs7Ozs7Ozs2Q0FFVEMsSyxFQUMyRDtBQUMzRCxVQUFNQyxNQUFNLEdBQUc7QUFBRUMsUUFBQUEsVUFBVSxFQUFFLElBQWQ7QUFBb0JDLFFBQUFBLFlBQVksRUFBRTtBQUFsQyxPQUFmO0FBQ0EsVUFBTUMsYUFBYSxHQUFHLEtBQUtDLGdCQUFMLEVBQXRCOztBQUVBLFVBQUlELGFBQWEsQ0FBQ0UsTUFBZCxLQUF5QixDQUE3QixFQUFnQztBQUM5QjtBQUNBLGVBQU9MLE1BQVA7QUFDRDs7QUFFRCxVQUFNTSxPQUFPLEdBQUdILGFBQWEsQ0FBQyxDQUFELENBQTdCO0FBQ0EsVUFBTUksT0FBTyxHQUFHUixLQUFLLENBQUNTLFNBQXRCOztBQUNBLFdBQUtDLG9CQUFMLENBQTBCLDBCQUFZLENBQUNILE9BQU8sQ0FBQyxDQUFELENBQVIsRUFBYUEsT0FBTyxDQUFDLENBQUQsQ0FBcEIsRUFBeUJDLE9BQU8sQ0FBQyxDQUFELENBQWhDLEVBQXFDQSxPQUFPLENBQUMsQ0FBRCxDQUE1QyxDQUFaLENBQTFCOztBQUVBLGFBQU9QLE1BQVA7QUFDRDs7OztFQWpCb0NVLHdDIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQGZsb3dcblxuaW1wb3J0IGJib3hQb2x5Z29uIGZyb20gJ0B0dXJmL2Jib3gtcG9seWdvbic7XG5pbXBvcnQgdHlwZSB7IFBvaW50ZXJNb3ZlRXZlbnQgfSBmcm9tICcuLi90eXBlcy5qcyc7XG5pbXBvcnQgeyB0eXBlIEdlb0pzb25FZGl0QWN0aW9uIH0gZnJvbSAnLi9nZW9qc29uLWVkaXQtbW9kZS5qcyc7XG5pbXBvcnQgeyBUd29DbGlja1BvbHlnb25Nb2RlIH0gZnJvbSAnLi90d28tY2xpY2stcG9seWdvbi1tb2RlLmpzJztcblxuZXhwb3J0IGNsYXNzIERyYXdSZWN0YW5nbGVNb2RlIGV4dGVuZHMgVHdvQ2xpY2tQb2x5Z29uTW9kZSB7XG4gIGhhbmRsZVBvaW50ZXJNb3ZlQWRhcHRlcihcbiAgICBldmVudDogUG9pbnRlck1vdmVFdmVudFxuICApOiB7IGVkaXRBY3Rpb246ID9HZW9Kc29uRWRpdEFjdGlvbiwgY2FuY2VsTWFwUGFuOiBib29sZWFuIH0ge1xuICAgIGNvbnN0IHJlc3VsdCA9IHsgZWRpdEFjdGlvbjogbnVsbCwgY2FuY2VsTWFwUGFuOiBmYWxzZSB9O1xuICAgIGNvbnN0IGNsaWNrU2VxdWVuY2UgPSB0aGlzLmdldENsaWNrU2VxdWVuY2UoKTtcblxuICAgIGlmIChjbGlja1NlcXVlbmNlLmxlbmd0aCA9PT0gMCkge1xuICAgICAgLy8gbm90aGluZyB0byBkbyB5ZXRcbiAgICAgIHJldHVybiByZXN1bHQ7XG4gICAgfVxuXG4gICAgY29uc3QgY29ybmVyMSA9IGNsaWNrU2VxdWVuY2VbMF07XG4gICAgY29uc3QgY29ybmVyMiA9IGV2ZW50Lm1hcENvb3JkcztcbiAgICB0aGlzLl9zZXRUZW50YXRpdmVGZWF0dXJlKGJib3hQb2x5Z29uKFtjb3JuZXIxWzBdLCBjb3JuZXIxWzFdLCBjb3JuZXIyWzBdLCBjb3JuZXIyWzFdXSkpO1xuXG4gICAgcmV0dXJuIHJlc3VsdDtcbiAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvZHJhdy1yZWN0YW5nbGUtbW9kZS5qcyJdLCJuYW1lcyI6WyJEcmF3UmVjdGFuZ2xlTW9kZSIsIlR3b0NsaWNrUG9seWdvbk1vZGUiLCJoYW5kbGVQb2ludGVyTW92ZUFkYXB0ZXIiLCJldmVudCIsInJlc3VsdCIsImVkaXRBY3Rpb24iLCJjYW5jZWxNYXBQYW4iLCJjbGlja1NlcXVlbmNlIiwiZ2V0Q2xpY2tTZXF1ZW5jZSIsImxlbmd0aCIsImNvcm5lcjEiLCJjb3JuZXIyIiwibWFwQ29vcmRzIiwiX3NldFRlbnRhdGl2ZUZlYXR1cmUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFFQTs7QUFHQTs7OztBQUVPLE1BQU1BLGlCQUFOLFNBQWdDQyx3Q0FBaEMsQ0FBb0Q7QUFDekRDLEVBQUFBLHdCQUF3QixDQUN0QkMsS0FEc0IsRUFFcUM7QUFDM0QsUUFBTUMsTUFBTSxHQUFHO0FBQUVDLE1BQUFBLFVBQVUsRUFBRSxJQUFkO0FBQW9CQyxNQUFBQSxZQUFZLEVBQUU7QUFBbEMsS0FBZjtBQUNBLFFBQU1DLGFBQWEsR0FBRyxLQUFLQyxnQkFBTCxFQUF0Qjs7QUFFQSxRQUFJRCxhQUFhLENBQUNFLE1BQWQsS0FBeUIsQ0FBN0IsRUFBZ0M7QUFDOUI7QUFDQSxhQUFPTCxNQUFQO0FBQ0Q7O0FBRUQsUUFBTU0sT0FBTyxHQUFHSCxhQUFhLENBQUMsQ0FBRCxDQUE3QjtBQUNBLFFBQU1JLE9BQU8sR0FBR1IsS0FBSyxDQUFDUyxTQUF0Qjs7QUFDQSxTQUFLQyxvQkFBTCxDQUEwQiwwQkFBWSxDQUFDSCxPQUFPLENBQUMsQ0FBRCxDQUFSLEVBQWFBLE9BQU8sQ0FBQyxDQUFELENBQXBCLEVBQXlCQyxPQUFPLENBQUMsQ0FBRCxDQUFoQyxFQUFxQ0EsT0FBTyxDQUFDLENBQUQsQ0FBNUMsQ0FBWixDQUExQjs7QUFFQSxXQUFPUCxNQUFQO0FBQ0Q7O0FBakJ3RCIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5cbmltcG9ydCBiYm94UG9seWdvbiBmcm9tICdAdHVyZi9iYm94LXBvbHlnb24nO1xuaW1wb3J0IHR5cGUgeyBQb2ludGVyTW92ZUV2ZW50IH0gZnJvbSAnLi4vdHlwZXMuanMnO1xuaW1wb3J0IHsgdHlwZSBHZW9Kc29uRWRpdEFjdGlvbiB9IGZyb20gJy4vZ2VvanNvbi1lZGl0LW1vZGUuanMnO1xuaW1wb3J0IHsgVHdvQ2xpY2tQb2x5Z29uTW9kZSB9IGZyb20gJy4vdHdvLWNsaWNrLXBvbHlnb24tbW9kZS5qcyc7XG5cbmV4cG9ydCBjbGFzcyBEcmF3UmVjdGFuZ2xlTW9kZSBleHRlbmRzIFR3b0NsaWNrUG9seWdvbk1vZGUge1xuICBoYW5kbGVQb2ludGVyTW92ZUFkYXB0ZXIoXG4gICAgZXZlbnQ6IFBvaW50ZXJNb3ZlRXZlbnRcbiAgKTogeyBlZGl0QWN0aW9uOiA/R2VvSnNvbkVkaXRBY3Rpb24sIGNhbmNlbE1hcFBhbjogYm9vbGVhbiB9IHtcbiAgICBjb25zdCByZXN1bHQgPSB7IGVkaXRBY3Rpb246IG51bGwsIGNhbmNlbE1hcFBhbjogZmFsc2UgfTtcbiAgICBjb25zdCBjbGlja1NlcXVlbmNlID0gdGhpcy5nZXRDbGlja1NlcXVlbmNlKCk7XG5cbiAgICBpZiAoY2xpY2tTZXF1ZW5jZS5sZW5ndGggPT09IDApIHtcbiAgICAgIC8vIG5vdGhpbmcgdG8gZG8geWV0XG4gICAgICByZXR1cm4gcmVzdWx0O1xuICAgIH1cblxuICAgIGNvbnN0IGNvcm5lcjEgPSBjbGlja1NlcXVlbmNlWzBdO1xuICAgIGNvbnN0IGNvcm5lcjIgPSBldmVudC5tYXBDb29yZHM7XG4gICAgdGhpcy5fc2V0VGVudGF0aXZlRmVhdHVyZShiYm94UG9seWdvbihbY29ybmVyMVswXSwgY29ybmVyMVsxXSwgY29ybmVyMlswXSwgY29ybmVyMlsxXV0pKTtcblxuICAgIHJldHVybiByZXN1bHQ7XG4gIH1cbn1cbiJdfQ==
