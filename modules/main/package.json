@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@luma.gl/constants": "^7.0.0",
-    "kepler-outdated-nebula.gl-layers": "0.15.0",
+    "kepler-outdated-nebula.gl-layers": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/layers/dist.tgz",
     "@turf/bbox": ">=4.0.0",
     "@turf/bbox-polygon": ">=4.0.0",
     "@turf/bearing": ">=4.0.0",

@@ -33,7 +33,7 @@
     "test": "yarn lint && yarn build && yarn flow && yarn jest"
   },
   "dependencies": {
-    "kepler-outdated-nebula.gl-edit-modes": "0.15.0",
+    "kepler-outdated-nebula.gl-edit-modes": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/edit-modes/dist.tgz",
     "@turf/helpers": "^6.1.4",
     "mjolnir.js": "^2.2.1",
     "prop-types": "^15.7.2",
