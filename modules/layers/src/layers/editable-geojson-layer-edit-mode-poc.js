@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env browser */
 
-import { GeoJsonLayer, ScatterplotLayer, IconLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, IconLayer } from 'kepler-outdated-deck.gl-layers';
 
 import {
   ViewMode,

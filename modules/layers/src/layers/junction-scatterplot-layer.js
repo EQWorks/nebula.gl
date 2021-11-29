@@ -1,6 +1,6 @@
 // @flow
-import { CompositeLayer } from '@deck.gl/core';
-import { ScatterplotLayer } from '@deck.gl/layers';
+import { CompositeLayer } from 'kepler-outdated-deck.gl-core';
+import { ScatterplotLayer } from 'kepler-outdated-deck.gl-layers';
 
 export default class JunctionScatterplotLayer extends CompositeLayer {
   static layerName = 'JunctionScatterplotLayer';

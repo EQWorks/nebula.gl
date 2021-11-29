@@ -1,5 +1,5 @@
 // @flow
-import { TextLayer } from '@deck.gl/layers';
+import { TextLayer } from 'kepler-outdated-deck.gl-layers';
 
 import NebulaLayer from '../nebula-layer';
 import { toDeckColor } from '../utils';

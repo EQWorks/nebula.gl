@@ -64,7 +64,7 @@ yarn add nebula.gl
 
 ```js
 import React from 'react';
-import DeckGL from 'deck.gl';
+import DeckGL from 'kepler-outdated-deck.gl';
 import { EditableGeoJsonLayer } from 'nebula.gl';
 
 const myFeatureCollection = {

@@ -1,5 +1,5 @@
 // @flow
-// port from @deck.gl/core
+// port from kepler-outdated-deck.gl-core
 
 function isEqual(a: any, b: any) {
   if (a === b) {

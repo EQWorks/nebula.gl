@@ -1,5 +1,5 @@
 // @flow
-import { PolygonLayer } from '@deck.gl/layers';
+import { PolygonLayer } from 'kepler-outdated-deck.gl-layers';
 import { point, polygon } from '@turf/helpers';
 import turfBbox from '@turf/bbox';
 import turfBboxPolygon from '@turf/bbox-polygon';
