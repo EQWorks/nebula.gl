@@ -86,7 +86,7 @@ If you built a custom `ModeHandler`, note the following breaking changes:
 
 ### Changes
 
-* Create `@nebula.gl/edit-modes` module (#225)
+* Create `kepler-outdated-nebula.gl-edit-modes` module (#225)
 * Decouple snapping functionality from deck.gl (#224)
 * Remove dependency on deck.gl from ElevationHandler (#223)
 * Ability to toggle GeoJSON text in example (#220)
@@ -99,7 +99,7 @@ If you built a custom `ModeHandler`, note the following breaking changes:
 * rename react-editor-lite to react-map-gl-draw (#215)
 * Fixed SelectionLayer: pickObjects to be called from deck (#214)
 * Fixed snapping: Changed _context.layerManager.pickObject (#213)
-* Port react-map-gl draw control to @nebula.gl/react-editor-lite (#204)
+* Port react-map-gl draw control to kepler-outdated-nebula.gl-react-editor-lite (#204)
 * Pass through lineWidthUnits to GeoJSONLayer (#203)
 
 ## [0.12.0](https://github.com/uber/nebula.gl/compare/v0.11.2...v0.12.0) - 2019-04-22
@@ -133,9 +133,9 @@ If you built a custom `ModeHandler`, note the following breaking changes:
 ### Changes
 
 * Setup coveralls (#191)
-* Create @nebula.gl/layers (#189)
+* Create kepler-outdated-nebula.gl-layers (#189)
 * Increase complexity of sample data (#190)
-* Remove @nebula.gl/react (#188)
+* Remove kepler-outdated-nebula.gl-react (#188)
 * Add zIndex property to html-overlay.js (#187)
 
 ## [0.10.5](https://github.com/uber/nebula.gl/compare/v0.10.4...v0.10.5) - 2019-03-19
@@ -143,7 +143,7 @@ If you built a custom `ModeHandler`, note the following breaking changes:
 ### Changes
 
 * Composite Mode Handler for creating and modifying at the same time (#184)
-* Create @nebula.gl/overlays (#182)
+* Create kepler-outdated-nebula.gl-overlays (#182)
 
 ## [0.10.4](https://github.com/uber/nebula.gl/compare/v0.10.3...v0.10.4) - 2019-03-15
 

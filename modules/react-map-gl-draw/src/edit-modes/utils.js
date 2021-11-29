@@ -1,7 +1,7 @@
 // @flow
 
 import type { MjolnirEvent } from 'mjolnir.js';
-import type { Feature, Position } from '@nebula.gl/edit-modes';
+import type { Feature, Position } from 'kepler-outdated-nebula.gl-edit-modes';
 
 import { GEOJSON_TYPE } from '../constants';
 

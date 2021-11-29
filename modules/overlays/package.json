@@ -1,5 +1,5 @@
 {
-  "name": "@nebula.gl/overlays",
+  "name": "kepler-outdated-nebula.gl-overlays",
   "description": "React overlays for deck.gl",
   "license": "MIT",
   "version": "0.15.0",

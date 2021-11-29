@@ -19,56 +19,56 @@ export { toDeckColor } from './lib/utils';
 // Types
 export type { Color, Style } from './types';
 
-// Moved to @nebula.gl/layers
-export { EditableGeoJsonLayer } from '@nebula.gl/layers';
-export { EditableGeoJsonLayerEditModePoc } from '@nebula.gl/layers';
-export { SelectionLayer } from '@nebula.gl/layers';
-export { ElevatedEditHandleLayer } from '@nebula.gl/layers';
-export { PathOutlineLayer } from '@nebula.gl/layers';
-export { PathMarkerLayer } from '@nebula.gl/layers';
+// Moved to kepler-outdated-nebula.gl-layers
+export { EditableGeoJsonLayer } from 'kepler-outdated-nebula.gl-layers';
+export { EditableGeoJsonLayerEditModePoc } from 'kepler-outdated-nebula.gl-layers';
+export { SelectionLayer } from 'kepler-outdated-nebula.gl-layers';
+export { ElevatedEditHandleLayer } from 'kepler-outdated-nebula.gl-layers';
+export { PathOutlineLayer } from 'kepler-outdated-nebula.gl-layers';
+export { PathMarkerLayer } from 'kepler-outdated-nebula.gl-layers';
 
 // TODO edit-modes: delete handlers once EditMode fully implemented
-export { ModeHandler } from '@nebula.gl/layers';
-export { CompositeModeHandler } from '@nebula.gl/layers';
-export { ViewHandler } from '@nebula.gl/layers';
-export { ModifyHandler } from '@nebula.gl/layers';
-export { DrawPointHandler } from '@nebula.gl/layers';
-export { DrawLineStringHandler } from '@nebula.gl/layers';
-export { DrawPolygonHandler } from '@nebula.gl/layers';
-export { DrawRectangleHandler } from '@nebula.gl/layers';
-export { DrawRectangleUsingThreePointsHandler } from '@nebula.gl/layers';
-export { DrawCircleFromCenterHandler } from '@nebula.gl/layers';
-export { DrawCircleByBoundingBoxHandler } from '@nebula.gl/layers';
-export { DrawEllipseByBoundingBoxHandler } from '@nebula.gl/layers';
-export { DrawEllipseUsingThreePointsHandler } from '@nebula.gl/layers';
-export { ElevationHandler } from '@nebula.gl/layers';
+export { ModeHandler } from 'kepler-outdated-nebula.gl-layers';
+export { CompositeModeHandler } from 'kepler-outdated-nebula.gl-layers';
+export { ViewHandler } from 'kepler-outdated-nebula.gl-layers';
+export { ModifyHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawPointHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawLineStringHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawPolygonHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawRectangleHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawRectangleUsingThreePointsHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawCircleFromCenterHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawCircleByBoundingBoxHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawEllipseByBoundingBoxHandler } from 'kepler-outdated-nebula.gl-layers';
+export { DrawEllipseUsingThreePointsHandler } from 'kepler-outdated-nebula.gl-layers';
+export { ElevationHandler } from 'kepler-outdated-nebula.gl-layers';
 
-export { EditMode } from '@nebula.gl/edit-modes';
+export { EditMode } from 'kepler-outdated-nebula.gl-edit-modes';
 
 // Alter modes
-export { ModifyMode } from '@nebula.gl/edit-modes';
-export { TranslateMode } from '@nebula.gl/edit-modes';
-export { ScaleMode } from '@nebula.gl/edit-modes';
-export { RotateMode } from '@nebula.gl/edit-modes';
-export { DuplicateMode } from '@nebula.gl/edit-modes';
-export { SplitPolygonMode } from '@nebula.gl/edit-modes';
-export { ExtrudeMode } from '@nebula.gl/edit-modes';
-export { ElevationMode } from '@nebula.gl/edit-modes';
+export { ModifyMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { TranslateMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { ScaleMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { RotateMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DuplicateMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { SplitPolygonMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { ExtrudeMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { ElevationMode } from 'kepler-outdated-nebula.gl-edit-modes';
 
 // Draw modes
-export { DrawPointMode } from '@nebula.gl/edit-modes';
-export { DrawLineStringMode } from '@nebula.gl/edit-modes';
-export { DrawPolygonMode } from '@nebula.gl/edit-modes';
-export { DrawRectangleMode } from '@nebula.gl/edit-modes';
-export { DrawCircleByBoundingBoxMode } from '@nebula.gl/edit-modes';
-export { DrawCircleFromCenterMode } from '@nebula.gl/edit-modes';
-export { DrawEllipseByBoundingBoxMode } from '@nebula.gl/edit-modes';
-export { DrawEllipseUsingThreePointsMode } from '@nebula.gl/edit-modes';
-export { DrawRectangleUsingThreePointsMode } from '@nebula.gl/edit-modes';
-export { Draw90DegreePolygonMode } from '@nebula.gl/edit-modes';
-export { ImmutableFeatureCollection } from '@nebula.gl/edit-modes';
+export { DrawPointMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawLineStringMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawPolygonMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawRectangleMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawCircleByBoundingBoxMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawCircleFromCenterMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawEllipseByBoundingBoxMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawEllipseUsingThreePointsMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { DrawRectangleUsingThreePointsMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { Draw90DegreePolygonMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { ImmutableFeatureCollection } from 'kepler-outdated-nebula.gl-edit-modes';
 
 // Other modes
-export { ViewMode } from '@nebula.gl/edit-modes';
-export { CompositeMode } from '@nebula.gl/edit-modes';
-export { SnappableMode } from '@nebula.gl/edit-modes';
+export { ViewMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { CompositeMode } from 'kepler-outdated-nebula.gl-edit-modes';
+export { SnappableMode } from 'kepler-outdated-nebula.gl-edit-modes';

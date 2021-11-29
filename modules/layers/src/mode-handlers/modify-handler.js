@@ -2,7 +2,7 @@
 
 import nearestPointOnLine from '@turf/nearest-point-on-line';
 import { point, lineString as toLineString } from '@turf/helpers';
-import type { Position, FeatureOf, Point, LineString } from '@nebula.gl/edit-modes';
+import type { Position, FeatureOf, Point, LineString } from 'kepler-outdated-nebula.gl-edit-modes';
 import {
   recursivelyTraverseNestedArrays,
   nearestPointOnProjectedLine,

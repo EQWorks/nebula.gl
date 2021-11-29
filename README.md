@@ -7,14 +7,14 @@
   </a>
 </p>
 <p align="right">
-  <a href="https://npmjs.org/package/@nebula.gl/edit-modes">
-    <img src="https://img.shields.io/npm/v/@nebula.gl/edit-modes.svg?label=@nebula.gl/edit-modes" alt="version" />
+  <a href="https://npmjs.org/package/kepler-outdated-nebula.gl-edit-modes">
+    <img src="https://img.shields.io/npm/v/kepler-outdated-nebula.gl-edit-modes.svg?label=kepler-outdated-nebula.gl-edit-modes" alt="version" />
   </a>
-  <a href="https://npmjs.org/package/@nebula.gl/layers">
-    <img src="https://img.shields.io/npm/v/@nebula.gl/layers.svg?label=@nebula.gl/layers" alt="version" />
+  <a href="https://npmjs.org/package/kepler-outdated-nebula.gl-layers">
+    <img src="https://img.shields.io/npm/v/kepler-outdated-nebula.gl-layers.svg?label=kepler-outdated-nebula.gl-layers" alt="version" />
   </a>
-  <a href="https://npmjs.org/package/@nebula.gl/overlays">
-    <img src="https://img.shields.io/npm/v/@nebula.gl/overlays.svg?label=@nebula.gl/overlays" alt="version" />
+  <a href="https://npmjs.org/package/kepler-outdated-nebula.gl-overlays">
+    <img src="https://img.shields.io/npm/v/kepler-outdated-nebula.gl-overlays.svg?label=kepler-outdated-nebula.gl-overlays" alt="version" />
   </a>
 </p>
 <p align="right">

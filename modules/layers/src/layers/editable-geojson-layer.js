@@ -4,7 +4,7 @@
 // TODO edit-modes: consolidate EditableGeoJsonLayer and EditableGeoJsonLayerEditModePoc
 
 import { GeoJsonLayer, ScatterplotLayer, IconLayer } from 'kepler-outdated-deck.gl-layers';
-import { type Position } from '@nebula.gl/edit-modes';
+import { type Position } from 'kepler-outdated-nebula.gl-edit-modes';
 import { ModeHandler } from '../mode-handlers/mode-handler.js';
 import { ViewHandler } from '../mode-handlers/view-handler.js';
 import { ModifyHandler } from '../mode-handlers/modify-handler.js';
