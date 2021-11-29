@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-layers");
 
 var _nebulaLayer = _interopRequireDefault(require("../nebula-layer"));
 
@@ -64,7 +64,7 @@ function (_NebulaLayer) {
           objects = _this$deckCache.objects,
           updateTrigger = _this$deckCache.updateTrigger;
       var zoom = nebula.props.viewport.zoom;
-      return new _keplerOudatedDeck.TextLayer({
+      return new _keplerOutdatedDeck.TextLayer({
         id: "texts-".concat(this.id),
         data: objects,
         opacity: 1,

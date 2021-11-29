@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -269,7 +269,7 @@ function (_CompositeLayer) {
   }]);
 
   return EditableLayer_EDIT_MODE_POC;
-}(_keplerOudatedDeck.CompositeLayer); // eslint-disable-next-line camelcase
+  }(_keplerOutdatedDeck.CompositeLayer); // eslint-disable-next-line camelcase
 
 
 exports.default = EditableLayer_EDIT_MODE_POC;

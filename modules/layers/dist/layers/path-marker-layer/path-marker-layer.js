@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
-var _keplerOudatedDeck2 = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck2 = require("kepler-outdated-deck.gl-layers");
 
 var _pathOutlineLayer = _interopRequireDefault(require("../path-outline-layer/path-outline-layer"));
 
@@ -109,7 +109,7 @@ function (_CompositeLayer) {
   }, {
     key: "projectFlat",
     value: function projectFlat(xyz, viewport, coordinateSystem, coordinateOrigin) {
-      if (coordinateSystem === _keplerOudatedDeck.COORDINATE_SYSTEM.METER_OFFSETS) {
+      if (coordinateSystem === _keplerOutdatedDeck.COORDINATE_SYSTEM.METER_OFFSETS) {
         var _viewport$metersToLng = viewport.metersToLngLatDelta(xyz),
             _viewport$metersToLng2 = _slicedToArray(_viewport$metersToLng, 2),
             dx = _viewport$metersToLng2[0],
@@ -120,7 +120,7 @@ function (_CompositeLayer) {
             y = _coordinateOrigin[1];
 
         return viewport.projectFlat([x + dx, dy + y]);
-      } else if (coordinateSystem === _keplerOudatedDeck.COORDINATE_SYSTEM.LNGLAT_OFFSETS) {
+      } else if (coordinateSystem === _keplerOutdatedDeck.COORDINATE_SYSTEM.LNGLAT_OFFSETS) {
         var _xyz = _slicedToArray(xyz, 2),
             _dx = _xyz[0],
             _dy = _xyz[1];
@@ -226,7 +226,7 @@ function (_CompositeLayer) {
           blend: false,
           depthTest: false
         }
-      }))), this.state.closestPoints && new _keplerOudatedDeck2.ScatterplotLayer({
+      }))), this.state.closestPoints && new _keplerOutdatedDeck2.ScatterplotLayer({
         id: "".concat(this.props.id, "-highlight"),
         data: this.state.closestPoints,
         fp64: this.props.fp64
@@ -235,7 +235,7 @@ function (_CompositeLayer) {
   }]);
 
   return PathMarkerLayer;
-}(_keplerOudatedDeck.CompositeLayer);
+  }(_keplerOutdatedDeck.CompositeLayer);
 
 exports.default = PathMarkerLayer;
 PathMarkerLayer.layerName = 'PathMarkerLayer';

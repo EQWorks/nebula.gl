@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.SELECTION_TYPE = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
-var _keplerOudatedDeck2 = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck2 = require("kepler-outdated-deck.gl-layers");
 
 var _helpers = require("@turf/helpers");
 
@@ -213,7 +213,7 @@ function (_CompositeLayer) {
 
       if (pendingPolygonSelection) {
         var bigPolygon = pendingPolygonSelection.bigPolygon;
-        layers.push(new _keplerOudatedDeck2.PolygonLayer(this.getSubLayerProps({
+        layers.push(new _keplerOutdatedDeck2.PolygonLayer(this.getSubLayerProps({
           id: LAYER_ID_BLOCKER,
           pickable: true,
           stroked: false,
@@ -244,7 +244,7 @@ function (_CompositeLayer) {
   }]);
 
   return SelectionLayer;
-}(_keplerOudatedDeck.CompositeLayer);
+  }(_keplerOutdatedDeck.CompositeLayer);
 
 exports.default = SelectionLayer;
 SelectionLayer.layerName = 'SelectionLayer';

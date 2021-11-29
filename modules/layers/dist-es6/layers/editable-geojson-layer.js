@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-layers");
 
 var _modeHandler = require("../mode-handlers/mode-handler.js");
 
@@ -274,7 +274,7 @@ function (_EditableLayer) {
           getLineDashArray: [this.props.selectedFeatureIndexes, this.props.mode]
         }
       });
-      var layers = [new _keplerOudatedDeck.GeoJsonLayer(subLayerProps)];
+      var layers = [new _keplerOutdatedDeck.GeoJsonLayer(subLayerProps)];
       layers = layers.concat(this.createTentativeLayers());
       layers = layers.concat(this.createEditHandleLayers());
       return layers;
@@ -418,7 +418,7 @@ function (_EditableLayer) {
 
       switch (this.props.editHandleType) {
         case 'icon':
-          var EditHandleIconLayer = this.getSubLayerClass('editHandles', _keplerOudatedDeck.IconLayer);
+          var EditHandleIconLayer = this.getSubLayerClass('editHandles', _keplerOutdatedDeck.IconLayer);
           layer = new EditHandleIconLayer(this.getSubLayerProps(_objectSpread({}, sharedProps, {
             iconAtlas: this.props.editHandleIconAtlas,
             iconMapping: this.props.editHandleIconMapping,
@@ -435,7 +435,7 @@ function (_EditableLayer) {
 
         case 'point':
         default:
-          var EditHandlePointLayer = this.getSubLayerClass('editHandles', _keplerOudatedDeck.ScatterplotLayer);
+          var EditHandlePointLayer = this.getSubLayerClass('editHandles', _keplerOutdatedDeck.ScatterplotLayer);
           layer = new EditHandlePointLayer(this.getSubLayerProps(_objectSpread({}, sharedProps, {
             // Proxy editing point props
             radiusScale: this.props.editHandlePointRadiusScale,
@@ -460,7 +460,7 @@ function (_EditableLayer) {
         return [];
       }
 
-      var layer = new _keplerOudatedDeck.GeoJsonLayer(this.getSubLayerProps({
+      var layer = new _keplerOutdatedDeck.GeoJsonLayer(this.getSubLayerProps({
         id: 'tentative',
         data: this.state.tentativeFeature,
         fp64: this.props.fp64,

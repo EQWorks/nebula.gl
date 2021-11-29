@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-layers");
 
 var _constants = _interopRequireDefault(require("@luma.gl/constants"));
 
@@ -188,7 +188,7 @@ function (_PathLayer) {
   }]);
 
   return PathOutlineLayer;
-}(_keplerOudatedDeck.PathLayer);
+  }(_keplerOutdatedDeck.PathLayer);
 
 exports.default = PathOutlineLayer;
 PathOutlineLayer.layerName = 'PathOutlineLayer';

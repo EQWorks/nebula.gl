@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.SELECTION_TYPE = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-layers");
 
 var _helpers = require("@turf/helpers");
 
@@ -312,7 +312,7 @@ function () {
       dataPick.push({
         polygon: [[0, 0]]
       });
-      return [new _keplerOudatedDeck.PolygonLayer({
+      return [new _keplerOutdatedDeck.PolygonLayer({
         id: LAYER_ID_VIEW,
         data: data,
         fp64: false,
@@ -333,7 +333,7 @@ function () {
         getPolygon: function getPolygon(o) {
           return o.polygon;
         }
-      }), new _keplerOudatedDeck.PolygonLayer({
+      }), new _keplerOutdatedDeck.PolygonLayer({
         id: LAYER_ID_PICK,
         data: dataPick,
         getLineColor: function getLineColor(obj) {

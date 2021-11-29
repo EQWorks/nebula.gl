@@ -18,7 +18,7 @@ var _pointToLineDistance = _interopRequireDefault(require("@turf/point-to-line-d
 
 var _helpers = require("@turf/helpers");
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

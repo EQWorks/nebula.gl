@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
-var _keplerOudatedDeck2 = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck2 = require("kepler-outdated-deck.gl-layers");
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -43,11 +43,11 @@ function (_CompositeLayer) {
   _createClass(ElevatedEditHandleLayer, [{
     key: "renderLayers",
     value: function renderLayers() {
-      var handles = new _keplerOudatedDeck2.ScatterplotLayer(Object.assign({}, this.props, {
+      var handles = new _keplerOutdatedDeck2.ScatterplotLayer(Object.assign({}, this.props, {
         id: "".concat(this.props.id, "-ScatterplotLayer"),
         data: this.props.data
       }));
-      var lines = new _keplerOudatedDeck2.LineLayer(Object.assign({}, this.props, {
+      var lines = new _keplerOutdatedDeck2.LineLayer(Object.assign({}, this.props, {
         id: "".concat(this.props.id, "-LineLayer"),
         data: this.props.data,
         pickable: false,
@@ -67,7 +67,7 @@ function (_CompositeLayer) {
   }]);
 
   return ElevatedEditHandleLayer;
-}(_keplerOudatedDeck.CompositeLayer);
+  }(_keplerOutdatedDeck.CompositeLayer);
 
 exports.default = ElevatedEditHandleLayer;
 ElevatedEditHandleLayer.layerName = 'ElevatedEditHandleLayer';

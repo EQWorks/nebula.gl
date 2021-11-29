@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
 var _constants = _interopRequireDefault(require("@luma.gl/constants"));
 
@@ -380,7 +380,7 @@ function (_Layer) {
   }]);
 
   return MeshLayer;
-}(_keplerOudatedDeck.Layer);
+  }(_keplerOutdatedDeck.Layer);
 
 exports.default = MeshLayer;
 MeshLayer.layerName = 'MeshLayer';

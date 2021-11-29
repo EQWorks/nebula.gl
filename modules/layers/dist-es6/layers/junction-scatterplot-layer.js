@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
-var _keplerOudatedDeck2 = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck2 = require("kepler-outdated-deck.gl-layers");
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -53,7 +53,7 @@ function (_CompositeLayer) {
           updateTriggers = _this$props.updateTriggers; // data needs to be passed explicitly after deck.gl 5.3
 
       return [// the full circles
-      new _keplerOudatedDeck2.ScatterplotLayer(_objectSpread({}, this.props, {
+        new _keplerOutdatedDeck2.ScatterplotLayer(_objectSpread({}, this.props, {
         id: "".concat(id, "-full"),
         data: this.props.data,
         getColor: getStrokeColor,
@@ -61,7 +61,7 @@ function (_CompositeLayer) {
           getColor: updateTriggers.getStrokeColor
         })
       })), // the inner part
-      new _keplerOudatedDeck2.ScatterplotLayer(_objectSpread({}, this.props, {
+        new _keplerOutdatedDeck2.ScatterplotLayer(_objectSpread({}, this.props, {
         id: "".concat(id, "-inner"),
         data: this.props.data,
         getColor: getFillColor,
@@ -76,13 +76,13 @@ function (_CompositeLayer) {
   }]);
 
   return JunctionScatterplotLayer;
-}(_keplerOudatedDeck.CompositeLayer);
+  }(_keplerOutdatedDeck.CompositeLayer);
 
 exports.default = JunctionScatterplotLayer;
 
 _defineProperty(JunctionScatterplotLayer, "layerName", 'JunctionScatterplotLayer');
 
-_defineProperty(JunctionScatterplotLayer, "defaultProps", _objectSpread({}, _keplerOudatedDeck2.ScatterplotLayer.defaultProps, {
+_defineProperty(JunctionScatterplotLayer, "defaultProps", _objectSpread({}, _keplerOutdatedDeck2.ScatterplotLayer.defaultProps, {
   getFillColor: function getFillColor(d) {
     return [0, 0, 0, 255];
   },

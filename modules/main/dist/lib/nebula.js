@@ -11,7 +11,7 @@ var _document = _interopRequireDefault(require("global/document"));
 
 var _window = _interopRequireDefault(require("global/window"));
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-core");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-core");
 
 var _deckDrawer = _interopRequireDefault(require("./deck-renderer/deck-drawer"));
 
@@ -121,7 +121,7 @@ function () {
       var _this2 = this;
 
       this.props = props;
-      this.wmViewport = new _keplerOudatedDeck.WebMercatorViewport(this.props.viewport); // TODO: Properly use pointer events: ['click', 'dblclick', 'pointermove', 'pointerup', 'pointerdown']
+      this.wmViewport = new _keplerOutdatedDeck.WebMercatorViewport(this.props.viewport); // TODO: Properly use pointer events: ['click', 'dblclick', 'pointermove', 'pointerup', 'pointerdown']
 
       ['click', 'dblclick', 'mousemove', 'mouseup', 'mousedown'].forEach(function (name) {
         return _document.default.addEventListener(name, _this2._onMouseEvent, true);
@@ -142,7 +142,7 @@ function () {
     value: function updateProps(newProps) {
       this.props = newProps;
       var viewport = this.props.viewport;
-      this.wmViewport = new _keplerOudatedDeck.WebMercatorViewport(viewport);
+      this.wmViewport = new _keplerOutdatedDeck.WebMercatorViewport(viewport);
     }
   }, {
     key: "log",

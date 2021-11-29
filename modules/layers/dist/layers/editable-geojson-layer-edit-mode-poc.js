@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _keplerOudatedDeck = require("kepler-oudated-deck.gl-layers");
+var _keplerOutdatedDeck = require("kepler-outdated-deck.gl-layers");
 
 var _editModes = require("@nebula.gl/edit-modes");
 
@@ -202,7 +202,7 @@ function (_EditableLayer) {
           getLineDashArray: [this.props.selectedFeatureIndexes, this.props.mode]
         }
       });
-      var layers = [new _keplerOudatedDeck.GeoJsonLayer(subLayerProps)];
+      var layers = [new _keplerOutdatedDeck.GeoJsonLayer(subLayerProps)];
       layers = layers.concat(this.createGuidesLayers());
       return layers;
     }
@@ -349,7 +349,7 @@ function (_EditableLayer) {
 
       if (this.props.editHandleType === 'icon') {
         pointLayerProps = {
-          type: _keplerOudatedDeck.IconLayer,
+          type: _keplerOutdatedDeck.IconLayer,
           iconAtlas: this.props.editHandleIconAtlas,
           iconMapping: this.props.editHandleIconMapping,
           sizeScale: this.props.editHandleIconSizeScale,
@@ -360,7 +360,7 @@ function (_EditableLayer) {
         };
       } else {
         pointLayerProps = {
-          type: _keplerOudatedDeck.ScatterplotLayer,
+          type: _keplerOutdatedDeck.ScatterplotLayer,
           radiusScale: this.props.editHandlePointRadiusScale,
           stroked: this.props.editHandlePointOutline,
           getLineWidth: this.props.editHandlePointStrokeWidth,
@@ -372,7 +372,7 @@ function (_EditableLayer) {
         };
       }
 
-      var layer = new _keplerOudatedDeck.GeoJsonLayer(this.getSubLayerProps({
+      var layer = new _keplerOutdatedDeck.GeoJsonLayer(this.getSubLayerProps({
         id: "guides",
         data: guides,
         fp64: this.props.fp64,
