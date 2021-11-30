@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env browser */
-import { CompositeLayer } from '@deck.gl/core';
-import { PolygonLayer } from '@deck.gl/layers';
+import { CompositeLayer } from 'kepler-outdated-deck.gl-core';
+import { PolygonLayer } from 'kepler-outdated-deck.gl-layers';
 import { polygon } from '@turf/helpers';
 import turfBuffer from '@turf/buffer';
 import turfDifference from '@turf/difference';

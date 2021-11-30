@@ -1,6 +1,6 @@
 // @flow
 
-import type { Feature, ClickEvent, FeatureCollection } from '@nebula.gl/edit-modes';
+import type { Feature, ClickEvent, FeatureCollection } from 'kepler-outdated-nebula.gl-edit-modes';
 import uuid from 'uuid/v1';
 import type { ModeProps } from '../types';
 

@@ -1,6 +1,6 @@
 // @flow
 
-import type { FeatureCollection, Feature, Position } from '@nebula.gl/edit-modes';
+import type { FeatureCollection, Feature, Position } from 'kepler-outdated-nebula.gl-edit-modes';
 import type {
   ClickEvent,
   PointerMoveEvent,

@@ -11,7 +11,7 @@ import type {
   FeatureOf,
   FeatureWithProps,
   Viewport
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 import WebMercatorViewport from 'viewport-mercator-project';
 
 // TODO edit-modes: delete and use edit-modes/utils instead

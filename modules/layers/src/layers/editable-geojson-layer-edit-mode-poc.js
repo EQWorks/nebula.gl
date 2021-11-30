@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env browser */
 
-import { GeoJsonLayer, ScatterplotLayer, IconLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, IconLayer } from 'kepler-outdated-deck.gl-layers';
 
 import {
   ViewMode,
@@ -24,7 +24,7 @@ import {
   DrawEllipseUsingThreePointsMode,
   Draw90DegreePolygonMode,
   SnappableMode
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 
 import type {
   EditAction,
@@ -34,7 +34,7 @@ import type {
   PointerMoveEvent,
   GeoJsonEditMode,
   FeatureCollection
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 import EditableLayer from './editable-layer-edit-mode-poc.js';
 
 const DEFAULT_LINE_COLOR = [0x0, 0x0, 0x0, 0xff];
