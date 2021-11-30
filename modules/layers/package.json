@@ -79,7 +79,7 @@
     "kepler-outdated-nebula.gl-edit-modes": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/edit-modes/dist.tgz",
     "kepler-outdated-deck.gl-core": "7.1.11",
     "kepler-outdated-deck.gl-layers": "7.1.11",
-    "@luma.gl/constants": "^7.0.0",
-    "@luma.gl/core": "^7.0.0"
+    "kepler-outdated-luma.gl-constants": "7.3.2",
+    "kepler-outdated-luma.gl-core": "7.3.2"
   }
 }

@@ -1460,11 +1460,6 @@
   resolved "https://registry.yarnpkg.com/@loaders.gl/images/-/images-1.3.7.tgz#fa0975e76cba12379c423df50de1940b32f3df00"
   integrity sha512-TKqW94vjvWc4RIChhr0Yx6HaVTe8K6h6GFeXcahsKeCxq9/k2qpcigRkXfmb6/37dkp2Qy5COHp73ECgN/q+NA==
 
-"@luma.gl/constants@^7.0.0":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@luma.gl/constants/-/constants-7.1.1.tgz#f966fad9069722974e1b7bcae2fcd7a2444090dc"
-  integrity sha512-F+lkZzMJNPvGeTCkOezyHafAb48ottMx10PYx3j1rsKFBM2v1LgBHnV1I37xjkrx8PMhdb/2zMg80nRrniudGw==
-
 "@mapbox/geojson-area@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@mapbox/geojson-area/-/geojson-area-0.2.2.tgz#18d7814aa36bf23fbbcc379f8e26a22927debf10"
@@ -6554,6 +6549,10 @@ kdbush@^3.0.0:
   resolved "https://github.com/EQWorks/deck.gl/raw/build/outdated/modules/react/dist.tgz#74f74e5b76bcf1556adcc44bc212051fad95f9e9"
   dependencies:
     prop-types "^15.6.0"
+
+"kepler-outdated-luma.gl-constants@https://github.com/EQWorks/luma.gl/raw/build/outdated/modules/constants/dist.tgz":
+  version "7.3.2"
+  resolved "https://github.com/EQWorks/luma.gl/raw/build/outdated/modules/constants/dist.tgz#b24ef5cd91cbe4676cd02448234d936a1e35d6a9"
 
 "kepler-outdated-luma.gl-core@https://github.com/EQWorks/luma.gl/raw/build/outdated/modules/core/dist.tgz":
   version "7.3.2"

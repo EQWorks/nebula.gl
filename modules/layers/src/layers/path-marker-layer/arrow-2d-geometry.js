@@ -1,4 +1,4 @@
-import { Geometry } from '@luma.gl/core';
+import { Geometry } from 'kepler-outdated-luma.gl-core';
 
 export default class Arrow2DGeometry extends Geometry {
   constructor(opts = {}) {

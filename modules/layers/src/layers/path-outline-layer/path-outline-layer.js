@@ -1,6 +1,6 @@
 import { PathLayer } from 'kepler-outdated-deck.gl-layers';
-import GL from '@luma.gl/constants';
-import { Framebuffer, Texture2D } from '@luma.gl/core';
+import GL from 'kepler-outdated-luma.gl-constants';
+import { Framebuffer, Texture2D } from 'kepler-outdated-luma.gl-core';
 import outline from '../../shaderlib/outline/outline';
 
 // TODO - this should be built into assembleShaders

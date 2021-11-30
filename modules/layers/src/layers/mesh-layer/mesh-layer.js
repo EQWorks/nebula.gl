@@ -23,8 +23,8 @@
 // THE SOFTWARE.
 
 import { Layer, COORDINATE_SYSTEM } from 'kepler-outdated-deck.gl-core';
-import GL from '@luma.gl/constants';
-import { Model, Geometry, loadTextures, Texture2D, fp64 } from '@luma.gl/core';
+import GL from 'kepler-outdated-luma.gl-constants';
+import { Model, Geometry, loadTextures, Texture2D, fp64 } from 'kepler-outdated-luma.gl-core';
 const { fp64LowPart } = fp64;
 
 import vs from './mesh-layer-vertex.glsl';
