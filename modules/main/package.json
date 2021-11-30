@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "@luma.gl/constants": "^7.0.0",
-    "kepler-outdated-nebula.gl-layers": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/layers/dist.tgz",
     "@turf/bbox": ">=4.0.0",
     "@turf/bbox-polygon": ">=4.0.0",
     "@turf/bearing": ">=4.0.0",
@@ -74,7 +73,11 @@
     "global": ">=4.3.0",
     "viewport-mercator-project": ">=6.0.0"
   },
+  "devDependencies": {
+    "kepler-outdated-nebula.gl-layers": "file:../layers"
+  },
   "peerDependencies": {
+    "kepler-outdated-nebula.gl-layers": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/layers/dist.tgz",
     "kepler-outdated-deck.gl-core": "7.1.11",
     "kepler-outdated-deck.gl-layers": "7.1.11",
     "@luma.gl/constants": "^7.0.0",

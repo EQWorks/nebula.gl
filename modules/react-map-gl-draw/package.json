@@ -33,7 +33,6 @@
     "test": "yarn lint && yarn build && yarn flow && yarn jest"
   },
   "dependencies": {
-    "kepler-outdated-nebula.gl-edit-modes": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/edit-modes/dist.tgz",
     "@turf/helpers": "^6.1.4",
     "mjolnir.js": "^2.2.1",
     "prop-types": "^15.7.2",
@@ -41,9 +40,11 @@
     "viewport-mercator-project": "^6.1.0"
   },
   "devDependencies": {
+    "kepler-outdated-nebula.gl-edit-modes": "file:../edit-modes",
     "react-map-gl": "^5.0.2"
   },
   "peerDependencies": {
+    "kepler-outdated-nebula.gl-edit-modes": "https://github.com/EQWorks/nebula.gl/raw/build/outdated/modules/edit-modes/dist.tgz",
     "react": "^16.x",
     "react-dom": "^16.x",
     "react-map-gl": "^5.x"
