@@ -1,14 +1,14 @@
 // @flow
 /* eslint-env browser */
 
-import { CompositeLayer } from '@deck.gl/core';
+import { CompositeLayer } from 'kepler-outdated-deck.gl-core';
 import type {
   ClickEvent,
   StartDraggingEvent,
   StopDraggingEvent,
   PointerMoveEvent,
   DoubleClickEvent
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 
 // Minimum number of pixels the pointer must move from the original pointer down to be considered dragging
 const MINIMUM_POINTER_MOVE_THRESHOLD_PIXELS = 7;

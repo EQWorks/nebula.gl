@@ -1,8 +1,8 @@
 // @flow
 /* eslint-env browser */
 
-import { CompositeLayer } from '@deck.gl/core';
-import { ScatterplotLayer, LineLayer } from '@deck.gl/layers';
+import { CompositeLayer } from 'kepler-outdated-deck.gl-core';
+import { ScatterplotLayer, LineLayer } from 'kepler-outdated-deck.gl-layers';
 
 const defaultProps = {};
 

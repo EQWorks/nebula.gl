@@ -7,7 +7,7 @@ import type {
   StartDraggingEvent,
   StopDraggingEvent,
   FeatureCollection
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 import type { ModeProps } from '../types';
 
 import { GEOJSON_TYPE, GUIDE_TYPE } from '../constants';

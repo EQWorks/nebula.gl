@@ -5,7 +5,8 @@ module.exports = {
         [
           '@babel/env',
           {
-            modules: 'commonjs'
+            modules: 'commonjs',
+            exclude: ['babel-plugin-transform-classes']
           }
         ],
         '@babel/react',
@@ -18,7 +19,16 @@ module.exports = {
       ]
     },
     es6: {
-      presets: ['@babel/env', '@babel/react', '@babel/flow'],
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            exclude: ['babel-plugin-transform-classes']
+          }
+        ],
+        '@babel/react',
+        '@babel/flow'
+      ],
       plugins: [
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-export-default-from',

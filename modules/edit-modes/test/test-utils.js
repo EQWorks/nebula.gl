@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env jest */
 
-import type { Position, FeatureCollection } from '@nebula.gl/edit-modes';
+import type { Position, FeatureCollection } from 'kepler-outdated-nebula.gl-edit-modes';
 import type {
   ModeProps,
   ClickEvent,

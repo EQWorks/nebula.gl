@@ -6,14 +6,14 @@ import turfUnion from '@turf/union';
 import turfDifference from '@turf/difference';
 import turfIntersect from '@turf/intersect';
 
-import { ImmutableFeatureCollection } from '@nebula.gl/edit-modes';
+import { ImmutableFeatureCollection } from 'kepler-outdated-nebula.gl-edit-modes';
 import type {
   FeatureCollection,
   Feature,
   Polygon,
   Geometry,
   Position
-} from '@nebula.gl/edit-modes';
+} from 'kepler-outdated-nebula.gl-edit-modes';
 import type {
   ClickEvent,
   PointerMoveEvent,

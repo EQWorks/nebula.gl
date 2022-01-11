@@ -1,4 +1,4 @@
-# @nebula.gl/overlays
+# kepler-outdated-nebula.gl-overlays
 
 This module contains react overlays for deck.gl.
 

@@ -1,6 +1,6 @@
 // @flow
 
-import type { LineString } from '@nebula.gl/edit-modes';
+import type { LineString } from 'kepler-outdated-nebula.gl-edit-modes';
 import { generatePointsParallelToLinePoints } from '../utils';
 import type { PointerMoveEvent } from '../event-types.js';
 import type { EditAction } from './mode-handler.js';
